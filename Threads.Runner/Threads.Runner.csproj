@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C72C4FF1-C718-44B5-A384-AD5E79D6D575}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Threads.Runner</RootNamespace>
+    <AssemblyName>Threads.Runner</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Threads.APM\Threads.APM.csproj">
+      <Project>{D2CD5E6A-ADE3-40D6-B52D-E1B7EE8B1FE9}</Project>
+      <Name>Threads.APM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.AutoResetEvent\Threads.AutoResetEvent.csproj">
+      <Project>{fed230e5-6b11-45a9-8e67-c92a7bbbe1fd}</Project>
+      <Name>Threads.AutoResetEvent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.Barrier\Threads.Barrier.csproj">
+      <Project>{4e45a740-f8f8-468a-9e44-92cab6ffc9ad}</Project>
+      <Name>Threads.Barrier</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.Cache\Threads.Cache.csproj">
+      <Project>{523369a3-d577-45dc-b986-12de88874d20}</Project>
+      <Name>Threads.Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.ChildTasks\Threads.ChildTasks.csproj">
+      <Project>{f1430566-468d-4152-862e-f0f59de943a1}</Project>
+      <Name>Threads.ChildTasks</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.ConcurrentCollections\Threads.ConcurrentCollections.csproj">
+      <Project>{2a94edfe-09a0-47a5-972f-9367c78b504f}</Project>
+      <Name>Threads.ConcurrentCollections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.Continuations\Threads.Continuations.csproj">
+      <Project>{eb63b5d3-b492-4a0d-a31a-051d4c8b4005}</Project>
+      <Name>Threads.Continuations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.CountDownEvent\Threads.CountDownEvent.csproj">
+      <Project>{9565bf17-5054-451b-8ea9-595d317bdfa6}</Project>
+      <Name>Threads.CountDownEvent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.CustomTaskScheduler\Threads.CustomTaskScheduler.csproj">
+      <Project>{8a302d38-2418-4c88-ad85-93c29a93865a}</Project>
+      <Name>Threads.CustomTaskScheduler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.Declarative\Threads.Declarative.csproj">
+      <Project>{f6cd9e0b-19a6-49b4-94c6-ca6b96fa619a}</Project>
+      <Name>Threads.Declarative</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.Decoupled\Threads.Decoupled.csproj">
+      <Project>{7221048f-e67a-4ef5-b72b-86f2be5775e9}</Project>
+      <Name>Threads.Decoupled</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.EAP\Threads.EAP.csproj">
+      <Project>{cc4dde20-12c4-4dc0-80c0-10888088f158}</Project>
+      <Name>Threads.EAP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.FirstGenerationCollections\Threads.FirstGenerationCollections.csproj">
+      <Project>{cd4ad3d0-95fb-477c-8ea8-e1ed6685e5b3}</Project>
+      <Name>Threads.FirstGenerationCollections</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.InterLocked\Threads.InterLocked.csproj">
+      <Project>{5fff7555-2bb1-4a35-aed1-d3500318624f}</Project>
+      <Name>Threads.InterLocked</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.Linq\Threads.Linq.csproj">
+      <Project>{0564cf91-1494-4359-b938-051e1d2cd039}</Project>
+      <Name>Threads.Linq</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.ManualResetEventSlim\Threads.ManualResetEventSlim.csproj">
+      <Project>{aea3d53d-d66a-4b62-b2fd-ccd2b9c82448}</Project>
+      <Name>Threads.ManualResetEventSlim</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.MapReduce\Threads.MapReduce.csproj">
+      <Project>{2f96bdd1-acef-4b49-b14e-6a94a039bc77}</Project>
+      <Name>Threads.MapReduce</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.Monitor\Threads.Monitor.csproj">
+      <Project>{0f905d83-6f95-4933-aba0-801d3dd3f374}</Project>
+      <Name>Threads.Monitor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.Mutex\Threads.Mutex.csproj">
+      <Project>{8477daa8-a56b-4214-ab77-4d36adf2f485}</Project>
+      <Name>Threads.Mutex</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.Parallel\Threads.Parallel.csproj">
+      <Project>{448e8170-d5b0-46d3-bde4-f72413d616e1}</Project>
+      <Name>Threads.Parallel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.Performance\Threads.Performance.csproj">
+      <Project>{151392c5-efd5-4122-8cac-aee336e9084f}</Project>
+      <Name>Threads.Performance</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.Pipeline\Threads.Pipeline.csproj">
+      <Project>{dee4cb8c-1dd1-4d48-af42-027100a050c6}</Project>
+      <Name>Threads.Pipeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.ProducerConsumer\Threads.ProducerConsumer.csproj">
+      <Project>{cf192d8d-0fc3-4728-a093-090d82696350}</Project>
+      <Name>Threads.ProducerConsumer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.QuickSort\Threads.QuickSort.csproj">
+      <Project>{5913dca9-8ccd-49f5-93b8-a5a2b3c9fc4d}</Project>
+      <Name>Threads.QuickSort</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.ReaderWriterLock\Threads.ReaderWriterLock.csproj">
+      <Project>{ae641967-8d22-4c94-a2d3-7117be9779ad}</Project>
+      <Name>Threads.ReaderWriterLock</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.SemaphoreSlim\Threads.SemaphoreSlim.csproj">
+      <Project>{4252d3ec-9c71-4e14-a999-49564f5e1e5c}</Project>
+      <Name>Threads.SemaphoreSlim</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.SpeculativeProcessing\Threads.SpeculativeProcessing.csproj">
+      <Project>{f37a5db6-d044-4437-ae43-b51c9bbf58b2}</Project>
+      <Name>Threads.SpeculativeProcessing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.SpinLock\Threads.SpinLock.csproj">
+      <Project>{2109f41c-9194-44ba-a5c6-6c8035528ca1}</Project>
+      <Name>Threads.SpinLock</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.TAP\Threads.TAP.csproj">
+      <Project>{0c770222-6017-420d-9e18-27498cb1b766}</Project>
+      <Name>Threads.TAP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Threads.TraversingParallelTree\Threads.ParallelTree.csproj">
+      <Project>{27699f0e-928a-4745-9aef-cfebe6e8c4b6}</Project>
+      <Name>Threads.ParallelTree</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
